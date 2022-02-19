@@ -1,13 +1,13 @@
 import express from 'express';
 import bodyParser from 'body-parser'; //take in incoming POST request bodies
-import usersRoutes from './routes/users.js'
+import dogsRouter from './routes/dogs.js'
 
 const app = express(); //using express
 const PORT = 9000; //backend port
 
 app.use(bodyParser.json()) //initialize bodyParser called as a function
 
-app.use('/users', usersRoutes);
+app.use('/dogs', dogsRouter);
 
 app.get('/', (req, res) => {
     
