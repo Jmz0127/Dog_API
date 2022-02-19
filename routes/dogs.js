@@ -17,8 +17,7 @@ const dogs = [
 
 // all routes mentioned below start with /dogs - see index.js under usersRouter
 router.get('/', (req, res) => {
-	res.send('Woof!');
-    console.log(dogs)
+    res.send(dogs);
 });
 
 export default router;
