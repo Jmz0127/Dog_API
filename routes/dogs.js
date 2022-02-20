@@ -4,9 +4,7 @@ import { v4 as uuidv4 } from 'uuid'; // id generator
 
 const router = express.Router();
 
-const dogs = [
-	
-];
+let dogs = [];
 
 // all routes mentioned below start with /dogs - see index.js under usersRouter
 router.get('/', (req, res) => {
@@ -25,6 +23,14 @@ router.post('/', (req, res) => {
     dogs.push({ ...dog, id: uuidv4()});
    
     res.send(`Dog with the dog name of ${dog.dogsName} successfully added to the database. Woof!`);
+});
+
+router.delete('/:id', (req, res) => {
+    const { id } = req.params;
+
+
+    dogs = dogs.filter((dog) => dog.id !== id); //filter for users where the id doesn't match the delete request, leaving the non-deleted dogs intact
+    res.send(`Dog with the id of ${id} successfully removed from the database. Woof!`);
 });
 
 export default router;
