@@ -17,7 +17,17 @@ const dogs = [
 
 // all routes mentioned below start with /dogs - see index.js under usersRouter
 router.get('/', (req, res) => {
+    
     res.send(dogs);
 });
+
+router.post('/', (req, res) => {
+    
+
+    const dog = req.body
+    dogs.push(dog)
+   
+    res.send(`Dog with the dog name of ${dog.dogsName} successfully added to the database. Woof!`);
+})
 
 export default router;
