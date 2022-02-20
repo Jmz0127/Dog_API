@@ -1,9 +1,10 @@
-#Welcome to Dog_API, a simple CRUD App that renders a REST API. This database uses express, node, uuid (no two dogs will have the same id, similar to a veterinary system). On successful upload of a new dog, you will get a success message and unique Id generated.
+#Welcome to Dog_API, a simple CRUD App that renders a REST API using Node and Express. 🦮
 
+---
 
+#Post your doggy's info with the three parameters - dogsName: breedType: age: - with POST endpoint "/". Your dog's entry into the system will generate a uuid (no two dogs will have the same id, similar to a veterinary system). You can then use that id to look up your pet's profile with the endpoint POST /dogs/:id(replace :id with your dog's uuid) 🐶
 
-#Post your doggy's info with the three parameters - dogsName: breedType: age: - with POST endpoint "/"
-#Get pre-existing dogs with GET endpoint "/"
+#Get pre-existing dogs with GET endpoint "/" 🐕
 
 
 
